@@ -1,3 +1,4 @@
+
 import 'dart:io';
 
 void main(){
@@ -5,12 +6,14 @@ void main(){
   stdout.write("\nDigite seu peso: ");
   double peso = double.parse(stdin.readLineSync()!);
 
-  double porsentagen15 = peso * 1.15  ;
-  double porsentagen20 = peso * 1.20  ;
+  double pesoMais15 = peso * 1.15  ;
+  double pesoMenos20 = peso * 0.80  ;
 
 
 
-  print("\nSeu peso se você engordar mais 15%: $porsentagen15");
-  print("\nSeu peso se você engordar mais 20%: $porsentagen20");
+  print("\nPeso atual: $peso"
+    "\nSeu peso se você engordar mais 15%: $pesoMais15"
+  "\nSeu peso se você emagrecer 20%: $pesoMenos20");
 
 }
+
