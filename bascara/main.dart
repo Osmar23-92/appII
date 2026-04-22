@@ -1,40 +1,28 @@
-
 import 'dart:io';
 import 'dart:math';
 
+void main (){
 
-void main(){
+stdout.write("\nInforme os valores a seguir");
 
-  stdout.write("\nDigite um valor para 'A': ");
-  double a = double.parse(stdin.readLineSync()!);
+stdout.write("\nA: ");
+double a = double.parse(stdin.readLineSync()!);
 
-  stdout.write("\nDigite um valor para 'B': ");
-  double b = double.parse(stdin.readLineSync()!);
+stdout.write("\nB: ");
+double b = double.parse(stdin.readLineSync()!);
 
-  stdout.write("\nDigite um valor para 'C': ");
-  double c = double.parse(stdin.readLineSync()!);
+stdout.write("\nC: ");
+double c = double.parse(stdin.readLineSync()!);
 
-  double delta = pow(b, 2) - (4 * a * c);
+double x1 = (- b + sqrt(b *b -4 * a * c)) / (2 * a);
+double x2 = (- b - sqrt(b *b -4 * a * c)) / (2 * a);
 
-    print("Equação:${a}x²+ (${b})x + (${c})=0");
+print("\nDados e cálculos\n"
+"A: $a\n"
+"B: $b\n"
+"C: $c\n"
+"X1: $x1\n"
+"X2: $x2\n");
 
-    print("delta: $delta");
 
-    if (delta<0){
-      print("A equação não possui raizes rais.");
-
-    }else if (delta==0){
-      double x = -b/(2*a);
-     print("A equação possui uma única raiz real: x=$x");
-
-    } else {
-      double x1 = (-b + sqrt(delta)) / (2*a);
-      double x2 = (-b - sqrt(delta)) / (2*a);
-
-      print("\nAs raizes são:");
-      print("x1 = $x1");
-      print("x2 = $x2");
-    }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 }
