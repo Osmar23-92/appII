@@ -87,13 +87,22 @@ class MeuApp extends StatelessWidget {
 
         TextButton(
           onPressed: (){},
-           child: Text("Cadastrar"),
+           child: 
+           Text("Cadastrar",
+           style: TextStyle(
+            color: Colors.greenAccent),
+            ),
 
            ),
+           SizedBox(width: 20,),
         
         TextButton(
           onPressed: (){},
-            child: Text("Limpar"),
+
+            child: 
+            Text("Limpar",
+            
+            ),
             ),
 
         ]
