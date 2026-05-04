@@ -11,9 +11,9 @@ class MeuApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
      home: Scaffold(
-      backgroundColor: const Color.fromARGB(255, 79, 152, 248),
+      backgroundColor: const Color.fromARGB(255, 128, 181, 252),
       appBar: AppBar(
-        title: const Text("Aplicativo")),
+        title: Center(child: const Text("Aplicativo"))),
         drawer: Drawer(
           child: ListView(
             padding: EdgeInsets.zero,
@@ -81,6 +81,10 @@ class MeuApp extends StatelessWidget {
             border: OutlineInputBorder()),
         ),
         
+          SizedBox(
+            height: 60,
+          ),
+
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
         children: [
