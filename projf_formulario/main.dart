@@ -2,114 +2,210 @@ import 'package:flutter/material.dart';
 
 void main(){
 
-  runApp(MeuApp());
+  runApp(Formulario());
+
 }
 
-class MeuApp extends StatelessWidget {
-  const MeuApp({super.key});
+class Formulario extends StatelessWidget {
+   Formulario({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.red,
           ),
-        body:  Center(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 50,
-              vertical: 30,
-            ),
-            child: Column(
-              spacing: 30,
-              children: [
-            
-            Image.asset(
-              "asset/images/",
-                      width: 80,
-                      ),
-            
-            Text("Formulário",
-            style: TextStyle(
-              fontSize: 40,
-              fontWeight: FontWeight.bold,
-              color: Color.fromARGB(255, 120, 0, 0),
-            ),
-            ),
-            
-            Row(
-              children: [
-                TextField(
-                  decoration: InputDecoration(
-                   labelText: "Nome:",
-                    border: OutlineInputBorder()),
+        
+        drawer: Drawer(),
+        body: Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 20,
+            vertical: 40,
+          ),
+          child: (
+            Column(
+              spacing: 10,
+            children: [
+              
+              Image.asset(
+                "asset/images/red.webp",
+                width: 150,
+                ),
+                
+          
+                Text(
+                  "Formulário",
+                  style: TextStyle(
+                    fontSize: 50,
+                    color: Colors.red,
+                  ),),
+
+          
+              Row(
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: TextField( 
+                      decoration: InputDecoration(
+                        labelText: "Nome:",
+                        border: OutlineInputBorder()),
+                        ),
                   ),
-                  TextField(
+          
+                      SizedBox(width: 5,),
+
+                  Expanded(
+                    flex: 1,
+                    child: TextField(
+                      decoration: InputDecoration(
+                      labelText: "Idade:",
+                      border: OutlineInputBorder(),),
+                                ),
+                  ),
+          
+                ],
+              ),
+          
+              
+
+              Row(
+                children: [
+                  Expanded(
+                    flex: 3,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        labelText: "Rua:",
+                        border: OutlineInputBorder(),),
+                    ),
+                  ),
+          
+                  SizedBox(width: 5,),
+
+                  Expanded(
+                    flex: 1,
+                    child: TextField(
                     decoration: InputDecoration(
-                     labelText: "Idade:",
-                     border: OutlineInputBorder() 
-                    ),  
+                      labelText: "Nº:",
+                      border: OutlineInputBorder(),),
+                                ),
                   ),
-              ],
-            ),
+          
+                ],
+              ),
+          
+              
+
+              Row(
+                children: [
+                  Expanded(
+                    flex: 2,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        labelText: "Complemento:",
+                        border: OutlineInputBorder(),),
+                      ),
+                  ),
+          
+                  SizedBox(width: 5,),
+
+                  Expanded(
+                    flex: 1,
+                    child: TextField(
+                      decoration: InputDecoration(
+                    labelText: "Bairro:",
+                    border: OutlineInputBorder(),),
+                      ),
+                  ),
+          
+                ],
+              ),
+          
+          
+              
+              Row(
+                children: [
+                  Expanded(
+                    flex: 3,
+                    child: TextField(
+                      decoration: InputDecoration(
+                    labelText: "Cidade:",
+                    border: OutlineInputBorder(),),
+                      ),
+                  ),
+
+          SizedBox(width: 5,),
+
+                  Expanded(
+                    flex: 1,
+                    child: TextField(
+                      decoration: InputDecoration(
+                    labelText: "CEP:",
+                    border: OutlineInputBorder(),),
+                      ),
+                  ),
+
+          SizedBox(width: 5,),
+
+                Expanded(
+                  flex: 1,
+                  child: TextField(
+                    decoration: InputDecoration(
+                    labelText: "Uf:",
+                    border: OutlineInputBorder(),),
+                  ),
+                ),
+          ],
+              ),
+
+              
 
               TextField(
-              decoration: InputDecoration(
-               labelText: "Nome:",
-                border: OutlineInputBorder()),
-              ),
-            
-            TextField(
-             decoration: InputDecoration(
-               labelText: "CPF:",
-                border: OutlineInputBorder()), 
-            ),
-            
-            TextField(
-              decoration: InputDecoration(
-               labelText: "Endereço:",
-                border: OutlineInputBorder()),
-            ),
-            
-              SizedBox(
-                height: 30,
-              ),
-          
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-          
-            TextButton(
-              onPressed: (){},
-               child: 
-               Text("Cadastrar",
-               style: TextStyle(
-                color: Colors.greenAccent),
+                decoration: InputDecoration(
+                  labelText: "Ponto de referência:",
+                  border: OutlineInputBorder(),),
                 ),
-          
-               ),
-               SizedBox(width: 20,),
-            
-            TextButton(
-              onPressed: (){},
-          
-                child: 
-                Text("Limpar",
+
+         
                 
-                ),
-                ),
-          
-            ]
-             
-            ),
-            
-              ],
-            
-              
-            ),
+              Row(
+                mainAxisAlignment: 
+                MainAxisAlignment.center,
+                children: [
+                  TextButton(
+                  onPressed: () {},
+                  child: Text("Cadastrar"),
+                    style: TextButton.styleFrom(
+                  backgroundColor: Colors.red,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(4.0), 
+           ),
           ),
         ),
+                    SizedBox(width: 20,),
+          
+                  TextButton(onPressed: (){},
+                   child: Text("Limpar"),
+                   style: TextButton.styleFrom(
+                  backgroundColor: Colors.red,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(4.0), 
+           ),
+          ),
+        ),
+          
+                ],
+              ),
+          
+              
+          
+            ],
+          )),
+        ),
+      
       ),
-      );
+    );
   }
 }
