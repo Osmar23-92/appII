@@ -43,6 +43,7 @@ class Formulario extends StatelessWidget {
 
           
               Row(
+                spacing: 7,
                 children: [
                   Expanded(
                     flex: 1,
@@ -53,7 +54,7 @@ class Formulario extends StatelessWidget {
                         ),
                   ),
           
-                      SizedBox(width: 5,),
+                      
 
                   Expanded(
                     flex: 1,
@@ -70,6 +71,7 @@ class Formulario extends StatelessWidget {
               
 
               Row(
+                spacing: 7,
                 children: [
                   Expanded(
                     flex: 3,
@@ -80,7 +82,7 @@ class Formulario extends StatelessWidget {
                     ),
                   ),
           
-                  SizedBox(width: 5,),
+                  
 
                   Expanded(
                     flex: 1,
@@ -97,6 +99,7 @@ class Formulario extends StatelessWidget {
               
 
               Row(
+                spacing: 7,
                 children: [
                   Expanded(
                     flex: 2,
@@ -107,7 +110,7 @@ class Formulario extends StatelessWidget {
                       ),
                   ),
           
-                  SizedBox(width: 5,),
+                  
 
                   Expanded(
                     flex: 1,
@@ -124,6 +127,7 @@ class Formulario extends StatelessWidget {
           
               
               Row(
+                spacing: 7,
                 children: [
                   Expanded(
                     flex: 3,
@@ -134,7 +138,7 @@ class Formulario extends StatelessWidget {
                       ),
                   ),
 
-          SizedBox(width: 5,),
+         
 
                   Expanded(
                     flex: 1,
@@ -145,7 +149,7 @@ class Formulario extends StatelessWidget {
                       ),
                   ),
 
-          SizedBox(width: 5,),
+          
 
                 Expanded(
                   flex: 1,
@@ -169,6 +173,7 @@ class Formulario extends StatelessWidget {
          
                 
               Row(
+                spacing: 10,
                 mainAxisAlignment: 
                 MainAxisAlignment.center,
                 children: [
@@ -183,7 +188,7 @@ class Formulario extends StatelessWidget {
            ),
           ),
         ),
-                    SizedBox(width: 20,),
+                    
           
                   TextButton(onPressed: (){},
                    child: Text("Limpar"),
