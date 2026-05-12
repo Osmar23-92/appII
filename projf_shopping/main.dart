@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:projf_shopping/home_page.dart';
 
 void main(){
+
   runApp(Shopping());
 
 }
+
 class Shopping extends StatelessWidget {
   const Shopping({super.key});
 
