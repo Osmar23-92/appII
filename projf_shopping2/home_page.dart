@@ -18,35 +18,40 @@ class HomePage extends StatelessWidget {
             Icon(Icons.face_4),
           ],
         ),
-
-        
+ 
       ),
+
       drawer: Drawer(),
+      
       bottomNavigationBar: BottomNavigationBar(
-        
         backgroundColor: Colors.pink,
         selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.grey,
+        unselectedItemColor: Colors.white,
+        iconSize: 30,
 
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-
-
+        type: BottomNavigationBarType.fixed,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home),
-          label: "Inicio"),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "home"
+          ),
 
-          BottomNavigationBarItem(icon: Icon(Icons.add),
-          label: "Cadastro"),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.add),
+            label: "Cadastro"
+          ),
 
-          BottomNavigationBarItem(icon: Icon(Icons.menu),
-          label: "Galeria"),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.email),
+            label: "email"
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.phone),
+            label: "Telefone"
+          ),
 
-          BottomNavigationBarItem(icon: Icon(Icons.mic_rounded),
-          label: "Gravar"),
-          
         ],
-      ),
+        ),
 
       body: Padding(
         padding: EdgeInsets.symmetric(
@@ -130,6 +135,9 @@ class HomePage extends StatelessWidget {
                     Text("Não tem conta?"),
                     
                     TextButton(
+                      style: TextButton.styleFrom(
+                        foregroundColor: Colors.purple,
+                      ),
                       onPressed: (){}, 
                       child: Text("Cadastre-se"),
                     ),

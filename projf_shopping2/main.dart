@@ -11,6 +11,7 @@ class Shopping extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false, //pra tirar o debug da tela
       home: HomePage(),
     );
   }
